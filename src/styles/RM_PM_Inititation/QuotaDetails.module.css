@@ -1,0 +1,16 @@
+.container {
+  background-color: #e3f2fd;
+  padding: 16px 24px;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #E5E7EB;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.label {
+  color: #101928;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 145%;
+  margin: 0;
+} 

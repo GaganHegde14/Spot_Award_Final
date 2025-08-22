@@ -1,0 +1,71 @@
+.row {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.rowSelected {
+  background-color: #f3f4f6;
+}
+
+.radioCell {
+  width: 56px;
+  text-align: center;
+  padding: 18px 24px;
+  vertical-align: middle;
+}
+
+.cell {
+  padding: 18px 24px;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #152032;
+}
+
+.departmentName {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.issued {
+  color: #101928;
+  font-weight: 600;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: 3px solid #9ca3af; /* grey ring when unchecked */
+  border-radius: 9999px;
+  background-color: #ffffff; /* white center */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.checkbox:hover {
+  border-color: #6b7280;
+}
+
+.checkbox:checked {
+  background-color: #ffffff; /* keep white gap between ring and dot */
+  border-color: #33b5e5; /* blue ring when checked */
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #33b5e5; /* blue inner dot */
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}

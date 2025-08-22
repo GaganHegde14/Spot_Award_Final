@@ -1,0 +1,17 @@
+.rectangle {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.inner { width: 100%; }
+
+.subHeader {
+  color: #111827;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+

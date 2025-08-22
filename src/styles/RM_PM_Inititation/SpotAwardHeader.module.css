@@ -1,0 +1,31 @@
+.root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 0 24px 0 24px;
+  margin-bottom: 0;
+}
+
+.inner {
+  display: flex;
+  align-items: flex-end;
+  height: 23px;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  height: 23px;
+}
+
+.title {
+  color: #101928;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 145%;
+}
+
+

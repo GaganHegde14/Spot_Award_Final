@@ -1,0 +1,81 @@
+.comment-container {
+  /* Container styles based on JSON spec */
+  width: 100%;
+  max-width: 1320px;
+  margin: 0;
+  padding: 0;
+}
+
+.comment-label {
+  /* Label styles based on JSON spec */
+  font-family: "Samsung InterFace", "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 145%;
+  color: #101928;
+  margin-bottom: 8px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.comment-input-frame {
+  /* Input frame styles based on JSON spec */
+  width: 105.5%;
+  height: 90px;
+  background-color: #ffffff;
+  border: 0.5px solid #d0d5dd;
+  border-radius: 6px;
+  padding: 0;
+  position: relative;
+}
+
+.comment-textarea {
+  /* Textarea styles */
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 16px;
+  font-family: "Samsung InterFace", "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 145%;
+  color: #000000;
+  background-color: transparent;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.comment-textarea::placeholder {
+  color: #6b7280;
+  font-family: "Samsung InterFace", "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 145%;
+}
+
+.comment-textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.comment-input-frame:focus-within {
+  border-color: #38aee0;
+  box-shadow: 0 0 0 1px #38aee0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .comment-container {
+    max-width: 100%;
+  }
+
+  .comment-label {
+    font-size: 13px;
+  }
+
+  .comment-textarea {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

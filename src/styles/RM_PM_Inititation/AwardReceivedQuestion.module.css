@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  max-width: 498px;
+  margin-bottom: 32px;
+}
+
+.question {
+  color: #202224;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.optionsContainer {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.radioIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.radioIcon.selected {
+  fill: #838383;
+}
+
+.radioIcon.unselected {
+  fill: #a9a8aa;
+}
+
+.optionText {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.optionText.selected {
+  color: #202224;
+}
+
+.optionText.unselected {
+  color: #6e6e6e;
+}
+
+

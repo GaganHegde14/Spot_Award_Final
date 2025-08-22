@@ -1,0 +1,33 @@
+.required-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 0;
+  padding: 16px 32px;
+}
+
+.clipboard-icon {
+  font-size: 24px;
+  color: #333333;
+}
+
+.required-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+  font-family: "Samsung InterFace", "Segoe UI", Arial, sans-serif;
+}
+
+.info-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-left: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.info-icon:hover {
+  opacity: 0.7;
+}

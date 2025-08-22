@@ -1,0 +1,76 @@
+.transfer-workflow-container {
+  /* Container styles based on JSON spec */
+  width: 100%;
+  max-width: none;
+  height: 39px;
+  background-color: #eff6ff;
+  border-radius: 0;
+  cursor: pointer;
+  /* Expand to edges of padded parent (e.g., 24px sides) */
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.transfer-workflow-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 24px;
+}
+
+.transfer-workflow-left {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.transfer-workflow-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transfer-workflow-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transfer-workflow-text {
+  /* Text styles based on JSON spec */
+  font-family: "Samsung InterFace", "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 145%;
+  color: #101928;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.transfer-workflow-arrow {
+  width: 11px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .transfer-workflow-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .transfer-workflow-content {
+    padding: 0 16px;
+  }
+
+  .transfer-workflow-text {
+    font-size: 14px;
+  }
+}

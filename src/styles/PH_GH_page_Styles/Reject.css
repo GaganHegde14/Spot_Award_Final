@@ -1,0 +1,48 @@
+.reject-button {
+  /* Button container styles based on JSON spec */
+  width: 90px;
+  height: 38px;
+  background-color: #ffffff;
+  border: 1px solid #38aee0;
+  border-radius: 4px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-family: "Samsung InterFace", "Inter", sans-serif;
+}
+
+.reject-button:hover {
+  background-color: #f8f9fa;
+  border-color: #2a9bb8;
+}
+
+.reject-button:active {
+  background-color: #e9ecef;
+  transform: translateY(1px);
+}
+
+.reject-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.reject-button:disabled:hover {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  transform: none;
+}
+
+.reject-button-text {
+  /* Text styles based on JSON spec */
+  font-size: 14px;
+  line-height: 100%;
+  color: #202224;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}

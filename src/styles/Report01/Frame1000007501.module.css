@@ -1,0 +1,36 @@
+.row {
+  height: 55px;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.row:hover {
+  background: #f0f9ff;
+}
+
+.cell {
+  padding: 18px 24px;
+  font-size: 14px;
+  vertical-align: middle;
+  color: #111827;
+}
+
+.departmentName {
+  color: #333333;
+  font-weight: 500;
+}
+
+.center {
+  text-align: center;
+}
+
+.issued {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: #a9a8aa;
+}

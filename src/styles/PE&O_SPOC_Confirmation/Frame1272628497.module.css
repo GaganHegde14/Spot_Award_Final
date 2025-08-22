@@ -1,0 +1,25 @@
+.root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 23px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 23px;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  height: 23px;
+}
+
+.title {
+  color: #101928;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 145%;
+}
