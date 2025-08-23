@@ -40,7 +40,7 @@ const defaultData = {
 };
 
 const ui = {
-  container: { padding: 16 },
+  container: { padding: 0 },
   title: { marginBottom: 12 },
   sectionLabel: {
     fontWeight: 600,
