@@ -45,26 +45,26 @@
   height: 48px;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 98%;
 }
 
 .inputFrame.grey {
-  background: #f3f4f6;
+  /* background removed */
 }
 
 .input {
   appearance: none;
   border: none;
   outline: none;
-  flex: 1 1 auto;
-  padding: 0 16px;
+  flex: 0 0 auto;
+  padding: 0;
   height: 100%;
   font-size: 14px;
   color: #111827;
   background: #eeeeee !important;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 100%;
+  width: 98%;
 }
 
 .input::placeholder {

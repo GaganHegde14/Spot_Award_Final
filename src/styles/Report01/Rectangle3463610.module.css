@@ -49,7 +49,7 @@
 }
 
 .inputFrame.grey {
-  background: #f3f4f6;
+  /* background removed */
 }
 
 .input {
@@ -57,7 +57,7 @@
   border: none;
   outline: none;
   flex: 1 1 auto;
-  padding: 0 16px;
+  padding: 0;
   height: 100%;
   font-size: 14px;
   color: #111827;
