@@ -50,7 +50,7 @@ const SpotAwardForm = ({ onSubmit }) => {
               <input
                 className={styles.input}
                 type="text"
-                placeholder="Chandra Sekhar Mudhragiri Guru"
+                placeholder="  Chandra Sekhar Mudhragiri Guru"
                 value={employeeName}
                 onChange={(e) => setEmployeeName(e.target.value)}
                 aria-label="Employee Name"
@@ -69,7 +69,7 @@ const SpotAwardForm = ({ onSubmit }) => {
               <input
                 className={styles.input}
                 type="text"
-                placeholder="Test"
+                placeholder="  Test"
                 value={justification}
                 onChange={(e) => setJustification(e.target.value)}
                 aria-label="Justification For Nomination"

@@ -9,8 +9,8 @@ const RequiredInfo = ({ onClick, className = "" }) => {
       <img
         src={requiredInfoIcon}
         alt="Required Information"
-        width="20"
-        height="20"
+        width="24"
+        height="26"
       />
       <span className="required-text">Required Information</span>
       <img

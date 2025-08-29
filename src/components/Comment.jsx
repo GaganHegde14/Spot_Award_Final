@@ -20,11 +20,12 @@ const Comment = ({ value, onChange, maxLength = 500 }) => {
       <div className="comment-input-frame">
         <textarea
           className="comment-textarea"
-          placeholder="Need Proxy Approval for Design Reference"
+          placeholder="  Need Proxy Approval for Design Reference"
           value={comment}
           onChange={handleChange}
           maxLength={maxLength}
           rows={4}
+          style={{ height: "90px" }}
         />
       </div>
     </div>

@@ -1,159 +1,230 @@
 .info-pop-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: transparent;
   z-index: 1000;
+  pointer-events: none;
+}
+
+.info-pop-overlay .info-pop-modal {
+  pointer-events: auto;
 }
 
 .info-pop-modal {
-  background: white;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  max-width: 1050px;
-  width: 95%;
-  max-height: 300px;
-  overflow: auto;
-  z-index: 1001;
-}
-
-/* Custom scrollbar styling */
-.info-pop-modal::-webkit-scrollbar {
-  width: 12px;
-}
-
-.info-pop-modal::-webkit-scrollbar-track {
-  background: #e3f2fd; /* Light blue background */
-  border-radius: 6px;
-}
-
-.info-pop-modal::-webkit-scrollbar-thumb {
-  background: #1976d2; /* Dark blue scrollbar */
-  border-radius: 6px;
-  border: 2px solid #e3f2fd;
-}
-
-.info-pop-modal::-webkit-scrollbar-thumb:hover {
-  background: #1565c0; /* Darker blue on hover */
-}
-
-/* Firefox scrollbar styling */
-.info-pop-modal {
-  scrollbar-width: thin;
-  scrollbar-color: #1976d2 #e3f2fd;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 1050px;
+  height: 273px;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: absolute;
 }
 
 .info-pop-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
-  border-bottom: 1px solid #e4e7ec;
-  background-color: #f8fafc;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  flex-shrink: 0;
 }
 
 .info-pop-title {
-  font-family: 'Samsung_InterFace-Bold', Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  color: #1e293b;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #202224;
   margin: 0;
+  line-height: 1.4;
 }
 
-.info-pop-close {
-  background: none;
+.info-pop-close-btn {
+  background: transparent;
   border: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  padding: 4px;
-  color: #64748b;
-  border-radius: 4px;
-  transition: all 0.2s;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  position: relative;
 }
 
-.info-pop-close:hover {
-  background-color: #f1f5f9;
-  color: #475569;
+.info-pop-close-btn:hover {
+  background-color: #f3f4f6;
 }
 
-.close-icon {
+.info-pop-close-btn img {
   width: 20px;
   height: 20px;
-  display: block;
+  object-fit: contain;
 }
 
 .info-pop-content {
-  padding: 20px;
-  position: relative;
-}
-
-.table-container {
-  border: 1px solid #e4e7ec;
-  border-radius: 8px;
-  background: white;
+  flex: 1;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 20px 20px;
 }
 
-.table-header {
-  position: relative;
-  height: 37px;
-  background-color: #f0f9ff;
-  border-bottom: 1px solid #e4e7ec;
+.info-pop-table-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
 }
 
-.table-header-cell {
-  position: absolute;
-  top: 8px;
-  font-family: 'Samsung_InterFace-Bold', Helvetica, sans-serif;
-  font-weight: bold;
+.info-pop-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.info-pop-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.info-pop-table th {
+  background-color: #e3f2fd;
   color: #374151;
-  line-height: 20.3px;
-  letter-spacing: -0.07px;
+  font-weight: 600;
+  text-align: left;
+  padding: 6px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  height: 32px;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.table-body {
-  background: white;
+.info-pop-table th:nth-child(1) {
+  width: 30%;
 }
 
-.table-row {
-  border-bottom: 1px solid #e4e7ec;
-  height: 47px;
+.info-pop-table th:nth-child(2) {
+  width: 15%;
 }
 
-.table-row:last-child {
+.info-pop-table th:nth-child(3) {
+  width: 15%;
+}
+
+.info-pop-table th:nth-child(4) {
+  width: 18%;
+}
+
+.info-pop-table th:nth-child(5) {
+  width: 15%;
+}
+
+.info-pop-table th:nth-child(6) {
+  width: 12%;
+}
+
+.info-pop-table td {
+  padding: 6px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  line-height: 1.4;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.info-pop-table tbody tr:last-child td {
   border-bottom: none;
 }
 
-.table-row-content {
-  position: relative;
-  height: 100%;
-  padding: 10px 0;
+.info-pop-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
 }
 
-.category-cell {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: 'Samsung_InterFace-Regular', Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  color: #111827;
-  line-height: 20.3px;
-  white-space: nowrap;
+.info-pop-table tbody tr:hover {
+  background-color: #f3f4f6;
 }
 
-.value-cell {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: 'Samsung_InterFace-Regular', Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  color: #111827;
-  line-height: 20.3px;
-  white-space: nowrap;
+/* Custom scrollbar styling */
+.info-pop-table-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.info-pop-table-container::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin: 2px 0;
+}
+
+.info-pop-table-container::-webkit-scrollbar-thumb {
+  background: #38aee0;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  min-height: 40px;
+}
+
+.info-pop-table-container::-webkit-scrollbar-thumb:hover {
+  background: #2d8bb8;
+}
+
+.info-pop-table-container::-webkit-scrollbar-corner {
+  background: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .info-pop-modal {
+    width: calc(100vw - 40px);
+    height: 200px;
+    max-width: 1050px;
+    max-height: 200px;
+  }
+
+  .info-pop-table th,
+  .info-pop-table td {
+    padding: 6px 12px;
+    font-size: 13px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-pop-modal {
+    width: calc(100vw - 20px);
+    height: 180px;
+    max-height: 180px;
+  }
+
+  .info-pop-header {
+    padding: 12px 16px;
+  }
+
+  .info-pop-title {
+    font-size: 16px;
+  }
+
+  .info-pop-table th,
+  .info-pop-table td {
+    padding: 6px 10px;
+    font-size: 12px;
+    height: 32px;
+  }
 }

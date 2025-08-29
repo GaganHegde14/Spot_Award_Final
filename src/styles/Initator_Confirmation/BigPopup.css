@@ -203,7 +203,7 @@
 
 /* Custom scrollbar styling */
 .big-popup-table-container::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 .big-popup-table-container::-webkit-scrollbar-track {

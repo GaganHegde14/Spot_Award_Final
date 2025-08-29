@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import closeButtonIcon from "../assets/svg/closebutton.svg";
 import "../styles/Initator_Confirmation/BigPopup.css";
 
 const BigPopup = ({ isOpen, onClose, triggerElement }) => {
+  const tableContainerRef = useRef(null);
+
+  // Scroll to middle when popup opens
+  useEffect(() => {
+    if (isOpen && tableContainerRef.current) {
+      const container = tableContainerRef.current;
+      const scrollHeight = container.scrollHeight;
+      const clientHeight = container.clientHeight;
+      const middlePosition = (scrollHeight - clientHeight) / 2;
+
+      container.scrollTop = middlePosition;
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   // Sample award history data
@@ -36,6 +50,51 @@ const BigPopup = ({ isOpen, onClose, triggerElement }) => {
       name: "Mike Johnson(11223344)",
       justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
       date: "25-Jun-2024",
+    },
+    {
+      name: "Sarah Wilson(99887766)",
+      justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
+      date: "30-Jun-2024",
+    },
+    {
+      name: "David Brown(11223344)",
+      justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
+      date: "05-Jul-2024",
+    },
+    {
+      name: "Emily Davis(55667788)",
+      justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
+      date: "10-Jul-2024",
+    },
+    {
+      name: "Michael Lee(33445566)",
+      justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
+      date: "15-Jul-2024",
+    },
+    {
+      name: "Lisa Garcia(77889900)",
+      justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
+      date: "20-Jul-2024",
+    },
+    {
+      name: "Robert Martinez(44556677)",
+      justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
+      date: "25-Jul-2024",
+    },
+    {
+      name: "Jennifer Taylor(66778899)",
+      justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
+      date: "30-Jul-2024",
+    },
+    {
+      name: "Christopher Anderson(88990011)",
+      justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
+      date: "05-Aug-2024",
+    },
+    {
+      name: "Amanda Thomas(00112233)",
+      justification: "xxx-xxxxx-xxxxxxxxxxxxxxx--xxxxxxxxxx",
+      date: "10-Aug-2024",
     },
   ];
 
@@ -125,7 +184,7 @@ const BigPopup = ({ isOpen, onClose, triggerElement }) => {
         </div>
 
         <div className="big-popup-content">
-          <div className="big-popup-table-container">
+          <div className="big-popup-table-container" ref={tableContainerRef}>
             <table className="big-popup-table">
               <thead>
                 <tr>

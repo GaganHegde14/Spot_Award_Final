@@ -48,7 +48,7 @@ const SpotAwardForm = ({ onSubmit }) => {
             <input
               className={styles.input}
               type="text"
-              placeholder="Enter Employee Name"
+              placeholder="  Enter Employee Name"
               value={employeeName}
               onChange={(e) => setEmployeeName(e.target.value)}
               aria-label="Employee Name"
@@ -71,8 +71,8 @@ const SpotAwardForm = ({ onSubmit }) => {
           >
             <input
               className={styles.input}
-              type="text"
-              placeholder="Need Proxy Approval for Design Reference"
+              type="text" 
+              placeholder="  Need Proxy Approval for Design Reference"
               value={justification}
               onChange={(e) => setJustification(e.target.value)}
               aria-label="Justification For Nomination"
